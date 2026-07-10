@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reza APH's Research Projects</title>
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --rule:#d9d9d9;
+      --link:#6c63ff;
+      --bg:#fff;
+      --panel:#fafaff;
+      --border:#e6e4ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:48px 20px 32px;
+    }
+    .nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:18px;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#4b4b4b;
+      font-size:14px;
+      padding:6px 10px;
+      border-radius:6px;
+      background:#f3f3ff;
+    }
+    .nav a:hover{filter:brightness(0.97)}
+    .rule{
+      border:0;
+      border-top:2px dotted var(--rule);
+      margin:18px 0 34px;
+    }
+    h1{
+      margin:0 0 12px;
+      font-size:44px;
+      letter-spacing:-0.5px;
+    }
+    .intro{color:var(--muted); margin:0 0 28px}
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+    }
+    .project{
+      padding:22px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:var(--panel);
+    }
+    .project h2{
+      margin:0 0 8px;
+      font-size:21px;
+      line-height:1.35;
+    }
+    .project p{margin:0 0 12px}
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:10px;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:14px;
+    }
+    .tag{
+      display:inline-block;
+      padding:3px 8px;
+      border-radius:999px;
+      background:#efedff;
+      color:#4f46a5;
+      font-size:12px;
+    }
+    a{color:var(--link)}
+    a:hover{text-decoration:none}
+    .footer{
+      margin-top:36px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    @media (max-width:720px){
+      h1{font-size:36px}
+      .projects{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="my_cv.html">Curriculum Vitae</a>
+      <a href="research_projects.html">Research Projects</a>
+    </nav>
+
+    <hr class="rule" />
+
+    <h1>Research Projects</h1>
+    <p class="intro">
+      My research applies spectroscopy, hyperspectral and thermal imaging, chemometrics, and machine learning to nondestructive assessment of food quality and plant stress.
+    </p>
+
+    <section class="projects" aria-label="Research project list">
+      <article class="project">
+        <div class="meta">Plant phenotyping · Thermal imaging</div>
+        <h2>Thermal Imaging for Potato Drought-Stress Assessment</h2>
+        <p>
+          Development of image-segmentation and canopy-temperature analysis methods for identifying water stress in greenhouse-grown potato plants, including crop water stress index analysis.
+        </p>
+        <div class="tags"><span class="tag">Thermography</span><span class="tag">U-Net</span><span class="tag">CWSI</span></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Food quality · Near-infrared spectroscopy</div>
+        <h2>Porang Flour Quality Prediction</h2>
+        <p>
+          Nondestructive prediction of moisture and calcium oxalate contents in porang flour using benchtop NIR spectroscopy, spectral preprocessing, and iteratively reweighted PLS regression.
+        </p>
+        <div class="tags"><span class="tag">NIRS</span><span class="tag">iRPLS</span><span class="tag">Chemometrics</span></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Food authentication · Hyperspectral imaging</div>
+        <h2>Detection of Porang Flour Adulteration</h2>
+        <p>
+          Detection and quantification of suweg and taro adulteration in porang flour using SWIR hyperspectral imaging, one-class classification, PLS regression, and support vector regression.
+        </p>
+        <div class="tags"><span class="tag">SWIR-HSI</span><span class="tag">DD-SIMCA</span><span class="tag">SVR</span></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Lightweight sensing · Grain quality</div>
+        <h2>Rice Moisture Prediction Using Spectral Indices</h2>
+        <p>
+          Development of absorbance-ratio-based moisture spectral indices for compact and interpretable prediction of moisture content across indigenous rice varieties.
+        </p>
+        <div class="tags"><span class="tag">NIRS</span><span class="tag">ARM-SI</span><span class="tag">PLSR</span></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Packaged fruit · Spectral correction</div>
+        <h2>Quality Assessment of Packaged Wild Raspberry</h2>
+        <p>
+          Investigation of orthogonalisation methods to minimise HDPE and LDPE packaging interference and improve NIR-based quality prediction for fruit measured through packaging.
+        </p>
+        <div class="tags"><span class="tag">Orthogonalisation</span><span class="tag">Packaging</span><span class="tag">NIR</span></div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Plant stress · Multispectral imaging</div>
+        <h2>Chilling-Stress Detection in Pepper Plants</h2>
+        <p>
+          High-throughput identification of chilling stress using fluorescence multispectral imaging and explainable machine-learning approaches.
+        </p>
+        <div class="tags"><span class="tag">Fluorescence</span><span class="tag">Multispectral imaging</span><span class="tag">XAI</span></div>
+      </article>
+    </section>
+
+    <hr class="rule" />
+
+    <footer class="footer">
+      © Reza Adhitama Putra Hernanda 2026 • email: reza.a.p@chungbuk.ac.kr • <a href="https://scholar.google.com/citations?user=51eeIg0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </footer>
+  </main>
+</body>
+</html>
