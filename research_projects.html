@@ -52,42 +52,24 @@
       font-size:44px;
       letter-spacing:-0.5px;
     }
-    .intro{color:var(--muted); margin:0 0 28px}
-    .projects{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:18px;
+    h2{
+      margin:0 0 20px;
+      font-size:25px;
     }
-    .project{
-      padding:22px;
-      border:1px solid var(--border);
-      border-radius:12px;
-      background:var(--panel);
+    .project-list{
+      margin-top:0;
     }
-    .project h2{
-      margin:0 0 8px;
-      font-size:21px;
-      line-height:1.35;
+    .project-item{
+      margin-bottom:28px;
     }
-    .project p{margin:0 0 12px}
-    .meta{
-      color:var(--muted);
-      font-size:14px;
-      margin-bottom:10px;
+    .project-item h3{
+      margin:0 0 2px;
+      font-size:17px;
+      line-height:1.4;
     }
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      margin-top:14px;
-    }
-    .tag{
-      display:inline-block;
-      padding:3px 8px;
-      border-radius:999px;
-      background:#efedff;
-      color:#4f46a5;
-      font-size:12px;
+    .project-item p{
+      margin:0;
+      text-align:justify;
     }
     a{color:var(--link)}
     a:hover{text-decoration:none}
@@ -99,7 +81,6 @@
     }
     @media (max-width:720px){
       h1{font-size:36px}
-      .projects{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -113,64 +94,82 @@
 
     <hr class="rule" />
 
-    <h1>Research Projects</h1>
-    <p class="intro">
-      My research applies spectroscopy, hyperspectral and thermal imaging, chemometrics, and machine learning to nondestructive assessment of food quality and plant stress.
-    </p>
+    <h1>Scientific projects</h1>
 
-    <section class="projects" aria-label="Research project list">
-      <article class="project">
-        <div class="meta">Plant phenotyping · Thermal imaging</div>
-        <h2>Thermal Imaging for Potato Drought-Stress Assessment</h2>
+    <h2>Current research projects</h2>
+
+    <section class="project-list" aria-label="Research project list">
+      <article class="project-item">
+        <h3>Porang Flour Quality Prediction</h3>
         <p>
-          Development of image-segmentation and canopy-temperature analysis methods for identifying water stress in greenhouse-grown potato plants, including crop water stress index analysis.
+          Porang (Amorphorphallus muelleri Blume) flour quality and authentication
         </p>
-        <div class="tags"><span class="tag">Thermography</span><span class="tag">U-Net</span><span class="tag">CWSI</span></div>
       </article>
 
-      <article class="project">
-        <div class="meta">Food quality · Near-infrared spectroscopy</div>
-        <h2>Porang Flour Quality Prediction</h2>
+      <article class="project-item">
+        <h3>Detection of Porang Flour Adulteration</h3>
         <p>
-          Nondestructive prediction of moisture and calcium oxalate contents in porang flour using benchtop NIR spectroscopy, spectral preprocessing, and iteratively reweighted PLS regression.
+          This project began in 2023 and investigates the performance of Vis–NIR and
+  NIR spectroscopy for estimating the quality parameters of porang flour.
+  In the initial study, partial least squares regression combined with variable
+  importance in projection was used to identify the most informative spectral
+  regions, enabling moisture content prediction using NIR spectroscopy. The research was subsequently extended to glucomannan content prediction
+  using the full NIR spectral range. Least absolute shrinkage and selection
+  operator regression was applied to select twelve informative wavelengths,
+  which were then coupled with Gaussian process regression. For NIR hyperspectral imaging, Dr. Hanim Zuhrotul Amanah of Universitas
+  Gadjah Mada, Indonesia, initiated an international collaborative project
+  involving Chungbuk National University and Chungnam National University,
+  Republic of Korea. This collaboration focuses on the nondestructive
+  detection and quantification of adulteration in porang flour. 
         </p>
-        <div class="tags"><span class="tag">NIRS</span><span class="tag">iRPLS</span><span class="tag">Chemometrics</span></div>
+        <p>
+  Related publications are available at:
+  <a href="https://doi.org/10.1007/s12161-026-03079-8"
+     target="_blank"
+     rel="noopener">
+    https://doi.org/10.1007/s12161-026-03079-8
+  </a>,
+  <a href="https://doi.org/10.1515/opag-2022-0268"
+     target="_blank"
+     rel="noopener">
+    https://doi.org/10.1515/opag-2022-0268
+  </a>,
+  and
+  <a href="https://doi.org/10.1016/j.microc.2026.118231"
+     target="_blank"
+     rel="noopener">
+    https://doi.org/10.1016/j.microc.2026.118231
+  </a>.
+</p>
+
+<p>
+  <strong>Project grant numbers:</strong>
+  684/UN1.P/KPT/HUKOR/2025, funded by Universitas Gadjah Mada through the
+  Academic Excellence A Programme; and 7743/UN1.P.II/Dit-Lit/PT.01.03/2023,
+  funded by the Directorate of Research, Universitas Gadjah Mada, through the
+  2023 Doctoral Competency Enhancement Research Grant.
+</p>
       </article>
 
-      <article class="project">
-        <div class="meta">Food authentication · Hyperspectral imaging</div>
-        <h2>Detection of Porang Flour Adulteration</h2>
+      <article class="project-item">
+        <h3>Rice Moisture Prediction Using Spectral Indices</h3>
         <p>
-          Detection and quantification of suweg and taro adulteration in porang flour using SWIR hyperspectral imaging, one-class classification, PLS regression, and support vector regression.
+          This study develops absorbance-ratio-based spectral indices for compact and interpretable prediction of rice moisture content. The method is designed to reduce model complexity while maintaining reliable performance across indigenous rice varieties.
         </p>
-        <div class="tags"><span class="tag">SWIR-HSI</span><span class="tag">DD-SIMCA</span><span class="tag">SVR</span></div>
       </article>
 
-      <article class="project">
-        <div class="meta">Lightweight sensing · Grain quality</div>
-        <h2>Rice Moisture Prediction Using Spectral Indices</h2>
+      <article class="project-item">
+        <h3>Quality Assessment of Packaged Wild Raspberry</h3>
         <p>
-          Development of absorbance-ratio-based moisture spectral indices for compact and interpretable prediction of moisture content across indigenous rice varieties.
+          This project investigates orthogonalisation methods to minimise the spectral interference caused by HDPE and LDPE packaging. The objective is to improve near-infrared prediction of fruit quality while the samples remain inside their packaging.
         </p>
-        <div class="tags"><span class="tag">NIRS</span><span class="tag">ARM-SI</span><span class="tag">PLSR</span></div>
       </article>
 
-      <article class="project">
-        <div class="meta">Packaged fruit · Spectral correction</div>
-        <h2>Quality Assessment of Packaged Wild Raspberry</h2>
+      <article class="project-item">
+        <h3>Chilling-Stress Detection in Pepper Plants</h3>
         <p>
-          Investigation of orthogonalisation methods to minimise HDPE and LDPE packaging interference and improve NIR-based quality prediction for fruit measured through packaging.
+          This project explores high-throughput identification of chilling stress in pepper plants using fluorescence multispectral imaging. Explainable machine-learning methods are used to identify important spectral features and interpret plant stress responses.
         </p>
-        <div class="tags"><span class="tag">Orthogonalisation</span><span class="tag">Packaging</span><span class="tag">NIR</span></div>
-      </article>
-
-      <article class="project">
-        <div class="meta">Plant stress · Multispectral imaging</div>
-        <h2>Chilling-Stress Detection in Pepper Plants</h2>
-        <p>
-          High-throughput identification of chilling stress using fluorescence multispectral imaging and explainable machine-learning approaches.
-        </p>
-        <div class="tags"><span class="tag">Fluorescence</span><span class="tag">Multispectral imaging</span><span class="tag">XAI</span></div>
       </article>
     </section>
 
